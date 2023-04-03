@@ -1,0 +1,91 @@
+mkdir SI_2023_lab1_213131  //креираме директориум
+cd SI_2023_lab1_213131
+git init //го иницијализираме директориумот во git 
+Initialized empty Git repository in C:/Users/NATALIJA/SI_2023_lab1_213131/.git/
+
+notepad README.md //го креираме фајлот 
+git add .   //го ставаме на сцена
+git commit -m "Initial commit" //го комитнуваме
+
+
+git remote add origin https://github.com/stoevan/SI_2023_lab1_213131.git  //се поврзуваме со репозиториумот  
+git branch -M master
+git push -u origin master
+
+
+notepad SILab1.java
+git add .  //го ставаме на сцена
+git commit -m "Add java class" //го комитнуваме
+git push origin // го ставаме на репозиториумот
+
+
+git branch bug1  //креираме гранка bug1
+git branch bug2  //креираме гранка bug2
+git branch bug3  //креираме гранка bug3
+
+git checkout bug1 //се префрламе на гранката
+notepad SILab1.java //ја поправаме грешката
+git add .//го ставаме фајлот на сцена
+git commit -m " Fix wrong loop for reading" //го комитнуваме
+
+
+git checkout bug2//се префрламе на гранката
+notepad SILab1.java //ја поправаме грешката
+git add .  //го ставаме на сцена
+git commit -m "Fix wrong condition in filterOddNumbers"  //го комитнуваме
+
+git checkout bug3
+notepad SILab1.java
+git add .  //го ставаме на сцена
+git commit -m "Fix method sumEvenNumbers" //го комитнуваме
+git push --all origin // ги ставаме сите гранки на репозиториумот
+
+
+git checkout master //се префрламе на мастер гранката
+
+git merge bug1 
+Updating 5209528..47e1e51
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push --all origin
+
+//Ја споивме гранката bug1 со Fast-forward без конфликти
+
+
+git merge bug2
+Auto-merging SILab1.java
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+git push --all origin
+
+//Ја споиме гранката bug2 со стратегијата ort без конфликти
+
+git checkout bug3
+git rebase master //правиме rebase
+Successfully rebased and updated refs/heads/bug3.
+git checkout master
+
+
+git merge bug3
+Updating 09b0aa8..e6239bc
+Fast-forward
+ SILab1.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+//Ja споивме гранаката bug3 без никакви конфликти со Fast-forward
+
+git push --all origin //тука ќе ни јави проблем(rejected)
+git pull // затоа правиме pull
+Already up to date.
+git push --all --force origin //со оваа команда успешно ќе ставиме се на репозиториумот
+
+
+git log
+notepad logs.txt
+git add . //го ставаме на сцена
+notepad 213131.txt
+git add . //го ставаме на сцена
+git commit -am "Final commit"  //ги комитнуваме
+git push --all origin

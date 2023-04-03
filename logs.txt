@@ -1,0 +1,29 @@
+C:\Users\NATALIJA\SI_2023_lab1_213131>git log
+commit e6239bc25353b4e5e5ed166535aa44d463ceb811 (HEAD -> master, origin/master, origin/bug3, bug3)
+Author: stoevan <108935768+stoevan@users.noreply.github.com>
+Date:   Tue Apr 4 00:50:52 2023 +0200
+
+    Fix method sumEvenNumbers
+
+commit 09b0aa8e0b6a5344a2c3c82f5030987f196e327a
+Merge: 47e1e51 7e83d97
+Author: stoevan <108935768+stoevan@users.noreply.github.com>
+Date:   Tue Apr 4 00:53:54 2023 +0200
+
+    Merge branch 'bug2'
+
+commit 7e83d979e1df85e739eaff2bc35fa66640fab10e (origin/bug2, bug2)
+Author: stoevan <108935768+stoevan@users.noreply.github.com>
+Date:   Tue Apr 4 00:49:20 2023 +0200
+
+    Fix wrong condition in filterOddNumbers
+
+commit 47e1e51a6fbcb3bf55b027f2657a32734051e5ce (origin/bug1, bug1)
+Author: stoevan <108935768+stoevan@users.noreply.github.com>
+Date:   Tue Apr 4 00:46:12 2023 +0200
+
+     Fix wrong loop for reading
+
+commit 5209528fcd282c6700b03797ddfee194e3c581a8
+Author: stoevan <108935768+stoevan@users.noreply.github.com>
+Date:   Tue Apr 4 00:43:03 2023 +0200
